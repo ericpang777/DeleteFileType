@@ -2,7 +2,7 @@
 import os
 
 path = "C:\\Users\\"  # Put path to folder where you want to search
-fileType = '.sfk'  # File Type
+fileType = ""  # File Type
 
 def GetFiles(str):
     if(str == "print"):
@@ -20,8 +20,9 @@ def GetFiles(str):
                 os.remove(tempPath)
     return
 
+fileType = input("What file type do you want to remove?\n").strip()
 print("Make sure you edited this program to include the folder path!\n")
-print("Do you want to delete these files ending with "+fileType+"?\n")
+print("Do you want to remove these files (forever) ending with "+fileType+"?\n")
 GetFiles("print")
 
 if input("\n(y) Yes | (n) No\n").strip().lower() == "y":
